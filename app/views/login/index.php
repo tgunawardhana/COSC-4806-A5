@@ -23,8 +23,30 @@
             <br>
 		    <button type="submit" class="btn btn-primary">Login</button>
 		</fieldset>
-			<p class="alert-danger"><?= $failed ?></p>
-			<p class="alert-success"><?= $success ?></p>
+
+			<?php if (isset($success) && $success != ""  ) { ?>
+				<br>																							
+				<div class="row">
+					<div class="col">
+							<div class="alert alert-success" role="alert">
+								<?= $success ?>
+						</div>
+						</div>
+							</div>
+				<?php } ?>
+	
+			<?php if (isset($failed) && $failed != "" ) { ?>
+				<br>
+				<div class="row">
+					<div class="col">
+							<div class="alert alert-danger" role="alert">
+								<?= $failed ?>
+						</div>
+						</div>
+							</div>
+				<?php } ?>
+
+						
 		</form> 
 			<br>
 
