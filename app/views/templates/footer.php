@@ -1,7 +1,16 @@
 <footer class="footer">    
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col text-start">
             <p>Copyright &copy; <?php echo date('Y'); ?> </p>
+        </div>
+
+        <div class="col-6 text-center">
+                <p>COSC 4806 Assignment</p>
+                <p>Thedini Gunawardhana</p>
+        </div>
+
+        <div class="col text-end">
+                <p> <a href="/logout">Logout</a></p>
         </div>
     </div>
 </footer>
