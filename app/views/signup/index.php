@@ -29,8 +29,16 @@
             <br>
         <button type="submit" class="btn btn-primary">Sign Up</button>
     </fieldset>
-        <br>
-        <p style="color:red;"><?= $failed ?></p>
+        <?php if (isset($failed) && $failed != "" ) { ?>
+            <br>
+            <div class="row">
+                <div class="col-lg-6">
+                        <div class="alert alert-danger" role="alert">
+                            <?= $failed ?>
+                    </div>
+                    </div>
+                        </div>
+            <?php } ?>
     </form> 
   </div>
 </div>
