@@ -25,7 +25,7 @@ class Report {
 
   public function get_all_logins(){
       $dbh = db_connect();
-      $statement = $dbh->prepare("select username, count(status) as successful from login_attempts where status = 'success' group by username;") ;
+      $statement = $dbh->prepare("select username, count(status) as login_count from login_attempts where status = 'success' group by username;") ;
       
       //$statement = $dbh->prepare("select * from login_attempts where status = 'success' group by username;") ;
       $statement->execute();
