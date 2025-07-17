@@ -21,12 +21,11 @@ class Report {
       return $rows;
   }
 
-  public function get_all_logins($username){
-    $dbh = db_connect();
-    $statement = $dbh->prepare("select * from login_attempts where username = :username;");
-    $statement->bindParam(':username', $username);
-    $statement->execute();
-    $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
+  public function get_all_logins(){
+      $dbh = db_connect();
+      $statement = $dbh->prepare("select * from login_attempts group by username;");
+      $statement->execute();
+      $rows = $statement->fetchAll(PDO::FETCH_ASSOC);
   }
 
 
