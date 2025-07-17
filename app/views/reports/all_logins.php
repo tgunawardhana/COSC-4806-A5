@@ -24,7 +24,7 @@
                     : ?>
                     <tr>
                       <td> <?php echo $login['username'] ?></td>
-                      <td> <?php echo $login['attempt_time'] ?> </td>
+                      <td> <?php echo $login['login_count'] ?> </td>
    
                     </tr>
                   <?php endforeach; ?>
@@ -33,7 +33,6 @@
             
         </div>    
 
-            <br>
         </div>
 
         </div>
