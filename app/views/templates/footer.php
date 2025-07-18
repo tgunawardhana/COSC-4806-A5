@@ -1,6 +1,7 @@
 <br>
 <br>
-<footer class="footer">    
+<div class="border-top mb-3 border-primary-dark border-2"> </div>
+<footer class="footer">
     <div class="row">
         <div class="col text-start">
             <p>Copyright &copy; <?php echo date('Y'); ?> </p>
@@ -12,7 +13,10 @@
         </div>
 
         <div class="col text-end">
+            <? if (isset($_SESSION['auth']) && $_SESSION['auth'] == 1) { ?>
                 <p> <a href="/logout">Logout</a></p>
+            <?php  } ?>
+                
         </div>
     </div>
 </footer>
