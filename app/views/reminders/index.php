@@ -19,7 +19,6 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1>Reminders</h1>
-
                 <a href="/reminders/create">Create Reminder</a>
                 
             </div>
@@ -33,7 +32,7 @@
                 <tr>
                   <th>Subject</th>
                   <th>Time Stamp</th>
-                  <th>Completed</th>
+                  <th class="align-middle text-center">Completed</th>
                   <th>Update</th>
                   <th>Delete</th>
                 </tr>
@@ -44,7 +43,7 @@
                   <tr>
                     <td> <?php echo $reminder['subject'] ?></td>
                     <td> <?php echo $reminder['created_at'] ?> </td>
-                    <td class="text-center">
+                    <td class="align-middle text-center">
 
                       <form method="post" action="/reminders/updateStatus" style="display:inline;">
                       <input type="hidden" name="id" value="<?php echo $reminder['id']; ?>">
